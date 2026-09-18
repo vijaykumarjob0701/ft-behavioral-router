@@ -1,0 +1,43 @@
+{
+  "method": "majority",
+  "split": "eval_ood",
+  "n_eval": 104,
+  "n_train": 526,
+  "trained_on": "train_v2",
+  "ood_in_training": false,
+  "accuracy": 0.25961538461538464,
+  "macro_f1": 0.10305343511450382,
+  "labels": [
+    "answer_small",
+    "rag",
+    "tools",
+    "escalate_large"
+  ],
+  "confusion_matrix": [
+    [
+      27,
+      0,
+      0,
+      0
+    ],
+    [
+      31,
+      0,
+      0,
+      0
+    ],
+    [
+      24,
+      0,
+      0,
+      0
+    ],
+    [
+      22,
+      0,
+      0,
+      0
+    ]
+  ],
+  "majority_label": "answer_small"
+}

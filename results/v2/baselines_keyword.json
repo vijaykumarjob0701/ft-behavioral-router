@@ -1,0 +1,40 @@
+{
+  "method": "keyword_heuristic",
+  "split": "eval_v2",
+  "n_eval": 133,
+  "n_train": 526,
+  "accuracy": 0.5789473684210527,
+  "macro_f1": 0.5301762662774779,
+  "labels": [
+    "answer_small",
+    "rag",
+    "tools",
+    "escalate_large"
+  ],
+  "confusion_matrix": [
+    [
+      37,
+      2,
+      2,
+      0
+    ],
+    [
+      18,
+      10,
+      3,
+      0
+    ],
+    [
+      6,
+      0,
+      25,
+      0
+    ],
+    [
+      20,
+      3,
+      2,
+      5
+    ]
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "method": "ft_distilbert",
+  "model_name": "distilbert-base-uncased",
+  "split": "eval_ood",
+  "n_eval": 104,
+  "n_train": 526,
+  "n_monitor": 133,
+  "monitor_split": "eval_v2",
+  "trained_on": "train_v2",
+  "ood_in_training": false,
+  "epochs": 5,
+  "seed": 42,
+  "accuracy": 0.875,
+  "macro_f1": 0.8744496855345911,
+  "labels": [
+    "answer_small",
+    "rag",
+    "tools",
+    "escalate_large"
+  ],
+  "confusion_matrix": [
+    [
+      26,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      26,
+      5,
+      0
+    ],
+    [
+      0,
+      2,
+      22,
+      0
+    ],
+    [
+      0,
+      1,
+      4,
+      17
+    ]
+  ],
+  "status": "ok",
+  "label_order_erratum": "v1.1 erratum: confusion_matrix was originally emitted in LabelEncoder alphabetical order (answer_small, escalate_large, rag, tools) while 'labels' declared PRIMARY_ACTIONS order; matrix has been permuted to match the declared label order. Scalar metrics were never affected (y_true/y_pred shared the same decode)."
+}

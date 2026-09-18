@@ -1,0 +1,100 @@
+{
+  "method": "ft_minilm",
+  "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+  "split": "eval_v2",
+  "n_eval": 133,
+  "n_train": 526,
+  "epochs": 5,
+  "seed": 42,
+  "accuracy": 0.8872180451127819,
+  "macro_f1": 0.8828666125541125,
+  "labels": [
+    "answer_small",
+    "rag",
+    "tools",
+    "escalate_large"
+  ],
+  "confusion_matrix": [
+    [
+      37,
+      2,
+      1,
+      1
+    ],
+    [
+      2,
+      23,
+      2,
+      4
+    ],
+    [
+      0,
+      0,
+      29,
+      2
+    ],
+    [
+      0,
+      0,
+      1,
+      29
+    ]
+  ],
+  "bootstrap": {
+    "n_boot": 1000,
+    "accuracy_mean": 0.885593984962406,
+    "accuracy_std": 0.026984232538857435,
+    "accuracy_ci95": [
+      0.8270676691729323,
+      0.9323308270676691
+    ],
+    "macro_f1_mean": 0.8793733948665705,
+    "macro_f1_std": 0.02835595133824636,
+    "macro_f1_ci95": [
+      0.8244415840688876,
+      0.9315293287669192
+    ]
+  },
+  "stratified_kfold": {
+    "k": 5,
+    "epochs_per_fold": 3,
+    "accuracy_mean": 0.766354383529956,
+    "accuracy_std": 0.04533880020598499,
+    "macro_f1_mean": 0.7397815119957285,
+    "macro_f1_std": 0.050586850480855455,
+    "folds": [
+      {
+        "fold": 1,
+        "n_eval": 132,
+        "accuracy": 0.803030303030303,
+        "macro_f1": 0.7758663811295391
+      },
+      {
+        "fold": 2,
+        "n_eval": 132,
+        "accuracy": 0.7803030303030303,
+        "macro_f1": 0.7693477597521248
+      },
+      {
+        "fold": 3,
+        "n_eval": 132,
+        "accuracy": 0.6893939393939394,
+        "macro_f1": 0.653198164227576
+      },
+      {
+        "fold": 4,
+        "n_eval": 132,
+        "accuracy": 0.7651515151515151,
+        "macro_f1": 0.7371311926296897
+      },
+      {
+        "fold": 5,
+        "n_eval": 131,
+        "accuracy": 0.7938931297709924,
+        "macro_f1": 0.7633640622397124
+      }
+    ]
+  },
+  "status": "ok",
+  "label_order_erratum": "v1.1 erratum: confusion_matrix was originally emitted in LabelEncoder alphabetical order (answer_small, escalate_large, rag, tools) while 'labels' declared PRIMARY_ACTIONS order; matrix has been permuted to match the declared label order. Scalar metrics were never affected (y_true/y_pred shared the same decode)."
+}

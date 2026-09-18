@@ -1,0 +1,169 @@
+{
+  "split": "eval_v2",
+  "n_eval": 133,
+  "n_train": 526,
+  "seed": 42,
+  "epochs_ft": 5,
+  "n_boot": 1000,
+  "prediction_sources": {
+    "keyword": "recomputed_deterministic",
+    "prompt_rubric": "recomputed_deterministic",
+    "minilm": "retrained_seed42",
+    "distilbert": "retrained_seed42"
+  },
+  "point_accuracies": {
+    "keyword": 0.5789473684210527,
+    "prompt_rubric": 0.7744360902255639,
+    "minilm": 0.8796992481203008,
+    "distilbert": 0.9699248120300752
+  },
+  "comparisons": [
+    {
+      "comparison": "distilbert_vs_minilm",
+      "model_a": "distilbert",
+      "model_b": "minilm",
+      "mcnemar": {
+        "n": 133,
+        "a_correct_b_wrong": 14,
+        "a_wrong_b_correct": 2,
+        "both_correct": 115,
+        "both_wrong": 2,
+        "discordant": 16,
+        "mcnemar_chi2_continuity": 7.5625,
+        "p_value_exact": 0.004180908203125,
+        "acc_a": 0.9699248120300752,
+        "acc_b": 0.8796992481203008,
+        "acc_diff_a_minus_b": 0.09022556390977443
+      },
+      "paired_bootstrap": {
+        "n_boot": 1000,
+        "acc_diff_mean": 0.09213533834586467,
+        "acc_diff_std": 0.029215710228493,
+        "acc_diff_ci95": [
+          0.03759398496240607,
+          0.15037593984962405
+        ],
+        "observed_acc_diff": 0.09022556390977443,
+        "p_value_bootstrap": 0.0
+      }
+    },
+    {
+      "comparison": "distilbert_vs_keyword",
+      "model_a": "distilbert",
+      "model_b": "keyword",
+      "mcnemar": {
+        "n": 133,
+        "a_correct_b_wrong": 55,
+        "a_wrong_b_correct": 3,
+        "both_correct": 74,
+        "both_wrong": 1,
+        "discordant": 58,
+        "mcnemar_chi2_continuity": 44.8448275862069,
+        "p_value_exact": 2.2598589666245064e-13,
+        "acc_a": 0.9699248120300752,
+        "acc_b": 0.5789473684210527,
+        "acc_diff_a_minus_b": 0.39097744360902253
+      },
+      "paired_bootstrap": {
+        "n_boot": 1000,
+        "acc_diff_mean": 0.3894887218045113,
+        "acc_diff_std": 0.045385910805136494,
+        "acc_diff_ci95": [
+          0.3007518796992481,
+          0.48120300751879697
+        ],
+        "observed_acc_diff": 0.39097744360902253,
+        "p_value_bootstrap": 0.0
+      }
+    },
+    {
+      "comparison": "minilm_vs_keyword",
+      "model_a": "minilm",
+      "model_b": "keyword",
+      "mcnemar": {
+        "n": 133,
+        "a_correct_b_wrong": 47,
+        "a_wrong_b_correct": 7,
+        "both_correct": 70,
+        "both_wrong": 9,
+        "discordant": 54,
+        "mcnemar_chi2_continuity": 28.166666666666668,
+        "p_value_exact": 2.291864209524874e-08,
+        "acc_a": 0.8796992481203008,
+        "acc_b": 0.5789473684210527,
+        "acc_diff_a_minus_b": 0.3007518796992481
+      },
+      "paired_bootstrap": {
+        "n_boot": 1000,
+        "acc_diff_mean": 0.2973533834586466,
+        "acc_diff_std": 0.046718481980436904,
+        "acc_diff_ci95": [
+          0.21052631578947367,
+          0.39097744360902253
+        ],
+        "observed_acc_diff": 0.3007518796992481,
+        "p_value_bootstrap": 0.0
+      }
+    },
+    {
+      "comparison": "distilbert_vs_prompt_rubric",
+      "model_a": "distilbert",
+      "model_b": "prompt_rubric",
+      "mcnemar": {
+        "n": 133,
+        "a_correct_b_wrong": 29,
+        "a_wrong_b_correct": 3,
+        "both_correct": 100,
+        "both_wrong": 1,
+        "discordant": 32,
+        "mcnemar_chi2_continuity": 19.53125,
+        "p_value_exact": 2.5560148060321808e-06,
+        "acc_a": 0.9699248120300752,
+        "acc_b": 0.7744360902255639,
+        "acc_diff_a_minus_b": 0.19548872180451127
+      },
+      "paired_bootstrap": {
+        "n_boot": 1000,
+        "acc_diff_mean": 0.1945187969924812,
+        "acc_diff_std": 0.03859766341069079,
+        "acc_diff_ci95": [
+          0.12030075187969924,
+          0.2706766917293233
+        ],
+        "observed_acc_diff": 0.19548872180451127,
+        "p_value_bootstrap": 0.0
+      }
+    },
+    {
+      "comparison": "minilm_vs_prompt_rubric",
+      "model_a": "minilm",
+      "model_b": "prompt_rubric",
+      "mcnemar": {
+        "n": 133,
+        "a_correct_b_wrong": 24,
+        "a_wrong_b_correct": 10,
+        "both_correct": 93,
+        "both_wrong": 6,
+        "discordant": 34,
+        "mcnemar_chi2_continuity": 4.970588235294118,
+        "p_value_exact": 0.024306510109454393,
+        "acc_a": 0.8796992481203008,
+        "acc_b": 0.7744360902255639,
+        "acc_diff_a_minus_b": 0.10526315789473684
+      },
+      "paired_bootstrap": {
+        "n_boot": 1000,
+        "acc_diff_mean": 0.10238345864661653,
+        "acc_diff_std": 0.040356487186187784,
+        "acc_diff_ci95": [
+          0.022556390977443552,
+          0.18045112781954886
+        ],
+        "observed_acc_diff": 0.10526315789473684,
+        "p_value_bootstrap": 0.008
+      }
+    }
+  ],
+  "honesty": "All statistics computed from measured per-example predictions on eval_v2. No invented p-values. Phase-2 cost not included.",
+  "status": "ok"
+}

@@ -1,0 +1,56 @@
+{
+  "split_ood": "eval_ood",
+  "n_ood": 104,
+  "n_train": 526,
+  "ood_in_training": false,
+  "in_domain_source": "results/v2/* measured artefacts",
+  "gap_table": {
+    "majority": {
+      "in_domain_accuracy": 0.3082706766917293,
+      "in_domain_macro_f1": 0.11781609195402298,
+      "ood_accuracy": 0.25961538461538464,
+      "ood_macro_f1": 0.10305343511450382,
+      "accuracy_gap": -0.04865529207634467,
+      "macro_f1_gap": -0.014762656839519162
+    },
+    "keyword": {
+      "in_domain_accuracy": 0.5789473684210527,
+      "in_domain_macro_f1": 0.5301762662774779,
+      "ood_accuracy": 0.36538461538461536,
+      "ood_macro_f1": 0.3476037851037851,
+      "accuracy_gap": -0.2135627530364373,
+      "macro_f1_gap": -0.18257248117369285
+    },
+    "prompt_rubric": {
+      "in_domain_accuracy": 0.7744360902255639,
+      "in_domain_macro_f1": 0.7658071095571095,
+      "ood_accuracy": 0.5,
+      "ood_macro_f1": 0.4702181989843047,
+      "accuracy_gap": -0.2744360902255639,
+      "macro_f1_gap": -0.2955889105728048
+    },
+    "minilm": {
+      "in_domain_accuracy": 0.8872180451127819,
+      "in_domain_macro_f1": 0.8828666125541125,
+      "ood_accuracy": 0.7884615384615384,
+      "ood_macro_f1": 0.7915520152362256,
+      "accuracy_gap": -0.09875650665124347,
+      "macro_f1_gap": -0.09131459731788683
+    },
+    "distilbert": {
+      "in_domain_accuracy": 0.9699248120300752,
+      "in_domain_macro_f1": 0.9691914436264719,
+      "ood_accuracy": 0.875,
+      "ood_macro_f1": 0.8744496855345911,
+      "accuracy_gap": -0.09492481203007519,
+      "macro_f1_gap": -0.09474175809188079
+    }
+  },
+  "paraphrase_agreement": {
+    "majority": 1.0,
+    "keyword_heuristic": 0.75,
+    "prompt_rubric_simulated": 0.9166666666666666,
+    "ft_minilm": 0.875,
+    "ft_distilbert": 0.9166666666666666
+  }
+}

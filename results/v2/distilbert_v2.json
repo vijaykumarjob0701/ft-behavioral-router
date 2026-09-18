@@ -1,0 +1,100 @@
+{
+  "method": "ft_distilbert",
+  "model_name": "distilbert-base-uncased",
+  "split": "eval_v2",
+  "n_eval": 133,
+  "n_train": 526,
+  "epochs": 5,
+  "seed": 42,
+  "accuracy": 0.9699248120300752,
+  "macro_f1": 0.9691914436264719,
+  "labels": [
+    "answer_small",
+    "rag",
+    "tools",
+    "escalate_large"
+  ],
+  "confusion_matrix": [
+    [
+      40,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      29,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      31,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      29
+    ]
+  ],
+  "bootstrap": {
+    "n_boot": 1000,
+    "accuracy_mean": 0.9692255639097744,
+    "accuracy_std": 0.015214087284090414,
+    "accuracy_ci95": [
+      0.9323308270676691,
+      0.9924812030075187
+    ],
+    "macro_f1_mean": 0.9681734610959376,
+    "macro_f1_std": 0.015592874244570518,
+    "macro_f1_ci95": [
+      0.9349728739349276,
+      0.9932466556062016
+    ]
+  },
+  "stratified_kfold": {
+    "k": 5,
+    "epochs_per_fold": 3,
+    "accuracy_mean": 0.9104672681008559,
+    "accuracy_std": 0.021708000583342626,
+    "macro_f1_mean": 0.908253407936851,
+    "macro_f1_std": 0.021898748620830025,
+    "folds": [
+      {
+        "fold": 1,
+        "n_eval": 132,
+        "accuracy": 0.946969696969697,
+        "macro_f1": 0.9450941946130463
+      },
+      {
+        "fold": 2,
+        "n_eval": 132,
+        "accuracy": 0.8939393939393939,
+        "macro_f1": 0.8939422329558072
+      },
+      {
+        "fold": 3,
+        "n_eval": 132,
+        "accuracy": 0.8939393939393939,
+        "macro_f1": 0.8896033943187289
+      },
+      {
+        "fold": 4,
+        "n_eval": 132,
+        "accuracy": 0.9090909090909091,
+        "macro_f1": 0.9069534619277317
+      },
+      {
+        "fold": 5,
+        "n_eval": 131,
+        "accuracy": 0.9083969465648855,
+        "macro_f1": 0.9056737558689414
+      }
+    ]
+  },
+  "status": "ok",
+  "label_order_erratum": "v1.1 erratum: confusion_matrix was originally emitted in LabelEncoder alphabetical order (answer_small, escalate_large, rag, tools) while 'labels' declared PRIMARY_ACTIONS order; matrix has been permuted to match the declared label order. Scalar metrics were never affected (y_true/y_pred shared the same decode)."
+}

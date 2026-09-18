@@ -1,0 +1,32 @@
+# MiniLM behavioural router — v2 splits
+model_name: sentence-transformers/all-MiniLM-L6-v2
+
+task: primary_action
+labels:
+  - answer_small
+  - rag
+  - tools
+  - escalate_large
+
+data:
+  train_path: data/routing/train_v2.jsonl
+  eval_path: data/routing/eval_v2.jsonl
+  text_field: query
+  label_field: primary_action
+
+training:
+  max_length: 128
+  batch_size: 16
+  learning_rate: 2.0e-5
+  num_epochs: 5
+  weight_decay: 0.01
+  seed: 42
+  warmup_ratio: 0.1
+
+eval:
+  metrics:
+    - accuracy
+    - macro_f1
+    - confusion_matrix
+
+output_dir: outputs/router_minilm_v2

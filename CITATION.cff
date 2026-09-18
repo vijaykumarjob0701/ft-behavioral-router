@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "FT-Behavioural Router: Knowledge vs Behaviour Separation in Adaptive Hybrid Inference"
+authors:
+  - family-names: Kumar
+    given-names: Vijay
+    email: vijaykumarjob0701@gmail.com
+    affiliation: "Dublin, Ireland"
+license: MIT
+repository-code: "https://github.com/vijaykumarjob0701/ft-behavioral-router"
+url: "https://github.com/vijaykumarjob0701/ft-behavioral-router/blob/main/preprint.pdf"
+type: software
+keywords:
+  - behavioural routing
+  - hybrid inference
+  - RAG
+  - LLM cascading
+  - fine-tuning

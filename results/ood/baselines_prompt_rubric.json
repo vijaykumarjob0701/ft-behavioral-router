@@ -1,0 +1,43 @@
+{
+  "method": "prompt_rubric_simulated",
+  "split": "eval_ood",
+  "n_eval": 104,
+  "n_train": 526,
+  "trained_on": "train_v2",
+  "ood_in_training": false,
+  "accuracy": 0.5,
+  "macro_f1": 0.4702181989843047,
+  "labels": [
+    "answer_small",
+    "rag",
+    "tools",
+    "escalate_large"
+  ],
+  "confusion_matrix": [
+    [
+      14,
+      5,
+      6,
+      2
+    ],
+    [
+      4,
+      14,
+      13,
+      0
+    ],
+    [
+      4,
+      0,
+      20,
+      0
+    ],
+    [
+      2,
+      8,
+      8,
+      4
+    ]
+  ],
+  "honesty": "Deterministic LABELING.md rubric simulation; NOT an LLM API prompted router."
+}
