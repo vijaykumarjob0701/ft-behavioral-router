@@ -10,6 +10,15 @@ Public, paper-only companion for the arXiv preprint. A **fine-tuned small model*
 | Paper PDF | [preprint.pdf](preprint.pdf) |
 | Extended technical report | [extended/thesis.pdf](extended/thesis.pdf) |
 | Cite | [CITATION.cff](CITATION.cff) |
+| Library (packaging) | [fta-router](https://github.com/vijaykumarjob0701/fta-router) — installable Python/JS package repo |
+
+---
+
+## Library
+
+The installable Python and JavaScript packages live in a **separate repo**: [fta-router](https://github.com/vijaykumarjob0701/fta-router). That repo is packaging (PyPI/npm) of the same 4-way behavioural routing schema (`answer_small | rag | tools | escalate_large`). See that repo for install docs.
+
+This repository remains the citable paper companion: preprint PDF, datasets, measured results, and reproduce scripts. Cite and clone **this** repo for the paper.
 
 ---
 
